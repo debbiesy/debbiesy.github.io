@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Debbiesy">
+		<title>Profile</title>
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+		<!-- fontawesome -->
+		<script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-a11y="true"></script>
+		<!-- custom css for login page -->
+		<link rel="stylesheet" type="text/css" href="css/profile.css">
+	</head>
+	<body>
+		<nav class="header sticky-top py-2">
+			<div class="container d-flex flex-row justify-content-between">
+				<a class="text-white" href="#">
+					<span>
+						<i class="fas fa-coffee"></i>
+					</span>
+				</a>
+				<a class="text-white" href="#">
+					Home
+				</a>
+				<a class="text-white" href="#">
+					Content
+					<span class="pl-1">
+						<i class="fas fa-caret-down"></i>
+					</span>
+				</a>
+				<a class="text-white" href="#">
+					Sign Out
+				</a>
+			</div>
+		</nav>
+		<div class="container">
+			<form role="form" id="profile_form" method="post" enctype="multipart/form-data" file="true">
+				<div class="row">
+					<!-- Start: Personal Information -->
+					<div class="col-12 mt-4 form_section">
+						<div class="bg-white shadow rounded p-4">
+							<h4>Personal Information</h4>
+							<hr>
+							<div class="row">
+								<!-- Avatar -->
+								<div class="col-12 col-md-4">
+									<div class="d-flex justify-content-center pt-3 pb-4">
+										<div class="avatar">
+											<div class="upload_avatar">
+												<input type="file" class="d-none" id="upload_img" accept=".png, .jpg, .jpeg">
+												<label for="upload_img">
+													<span>
+														<i class="fas fa-camera"></i>
+													</span>
+												</label>
+											</div>
+											<div class="preview_avatar">
+												<div class="preview_img">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Personal Details -->
+								<div class="col-12 col-md-8">
+									<div class="form-group row">
+										<div class="col-12">
+											<label for="username">Username</label>
+											<input type="text" class="form-control" id="username" name="username" placeholder="Username" value="Alex" disabled>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-12 col-md-6">
+											<label for="first_name">First Name</label>
+											<input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" value="">
+										</div>
+										<div class="col-12 col-md-6 pt-3 pt-md-0">
+											<label for="last_name">Last Name</label>
+											<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" value="">
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-12 col-md-6">
+											<label for="gender">Gender</label>
+											<select class="form-control" id="gender" name="gender">
+												<option value="0">Select Gender</option>
+												<option value="F">Female</option>
+												<option value="M">Male</option>
+											</select>
+										</div>
+										<div class="col-12 col-md-6 pt-3 pt-md-0">
+											<label for="birth_date">Birth Date</label>
+											<div class="input-group date">
+												<input type="text" class="form-control datepicker" id="birth_date" name="birth_date" placeholder="01/01/2000" value="">
+												<div class="input-group-append">
+													<span class="input-group-text"><i class="fas fa-calendar"></i></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-12 col-md-6">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" value="">
+										</div>
+										<div class="col-12 col-md-6 pt-3 pt-md-0">
+											<label for="phone">Phone Number<span class="text-muted"></span></label>
+											<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" value="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center pt-3">
+								<div class="col-6 col-md-3 text-center">
+									<button type="submit" class="btn btn-warning btn-upper update_btn">Save</button>
+								</div>
+								<div class="col-6 col-md-3 text-center">
+									<button type="reset" class="btn btn-secondary btn-upper cancel_btn">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: Personal Information -->
+
+					<!-- Start: Address Information -->
+					<div class="col-12 mt-4 form_section">
+						<div class="col-12 bg-white shadow rounded p-4">
+							<h4>Address Information</h4>
+							<hr>
+							<div class="form-group row">
+								<div class="col-12">
+									<label for="addr1">Address 1</label>
+									<input type="text" class="form-control" id="addr1" name="addr1" placeholder="Address 1" value="">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-12">
+									<label for="addr2">
+										Address 2
+										<span class="text-muted">(Optional)</span>
+									</label>
+									<input type="text" class="form-control" id="addr2" name="addr2" placeholder="Address 2" value="">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-12 col-md-6">
+									<label for="country">Country</label>
+									<select class="form-control" id="country" name="country">
+										<option value="0">Select Country</option>
+										<option value="1">Malaysia</option>
+									</select>
+								</div>
+								<div class="col-12 col-md-6 pt-3 pt-md-0">
+									<label for="state">State</label>
+									<select class="form-control" id="state">
+										<option value="0">Select State</option>
+										<option value="10">Selangor</option>
+										<option value="11">Wilayah Persekutuan</option>
+										<option value="12">Johor</option>
+										<option value="13">Kedah</option>
+										<option value="14">Kelantan</option>
+										<option value="15">Kuala Lumpur</option>
+										<option value="16">Labuan</option>
+										<option value="17">Malacca</option>
+										<option value="18">Negeri Sembilan</option>
+										<option value="19">Pahang</option>
+										<option value="20">Penang</option>
+										<option value="21">Perak</option>
+										<option value="22">Perlis</option>
+										<option value="23">Sabah</option>
+										<option value="24">Sarawak</option>
+										<option value="25">Selangor</option>
+										<option value="26">Terengganu</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-12 col-md-6">
+									<label for="city">City</label>
+									<select class="form-control" id="city">
+										<option value="0">Select City</option>
+										<!-- <option value="30"></option> -->
+									</select>
+								</div>
+								<div class="col-12 col-md-6 pt-3 pt-md-0">
+									<label for="zip">Zip</label>
+									<input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" value="">
+								</div>
+							</div>
+							<div class="row justify-content-center pt-3">
+								<div class="col-6 col-md-3 text-center">
+									<button type="submit" class="btn btn-warning btn-upper update_btn">Save</button>
+								</div>
+								<div class="col-6 col-md-3 text-center">
+									<button type="reset" class="btn btn-secondary btn-upper cancel_btn">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: Address Information -->
+
+					<!-- Start: Change Password -->
+					<div class="col-12 mt-4 form_section">
+						<div class="col-12 bg-white shadow rounded p-4">
+							<h4>Change Password</h4>
+							<hr>
+							<div class="form-group row">
+								<div class="col-12 col-md-4">
+									<label for="old_password">Current Password</label>
+									<input type="password" class="form-control" id="old_password" name="old_password" placeholder="Current Password" value="">
+								</div>
+								<div class="col-12 col-md-4 pt-3 pt-md-0">
+									<label for="new_password">New Password</label>
+									<input type="password" class="form-control" id="new_password" name="new_password" placeholder="New Password" value="">
+								</div>
+								<div class="col-12 col-md-4 pt-3 pt-md-0">
+									<label for="confirm_new_password">Confirm New Password</label>
+									<input type="password" class="form-control" id="confirm_new_password" name="confirm_new_password" placeholder="Confirm New Password" value="">
+								</div>
+							</div>
+							<div class="row justify-content-center pt-3">
+								<div class="col-6 col-md-3 text-center">
+									<button type="submit" class="btn btn-warning btn-upper update_btn">Save</button>
+								</div>
+								<div class="col-6 col-md-3 text-center">
+									<button type="reset" class="btn btn-secondary btn-upper cancel_btn">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: Change Password -->
+				</div>
+			</form>
+			<footer class="mt-4 text-center text-small">
+				<p class="">© 2018 Example</p>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript" src="js/profile.js"></script>
+	</body>
+</html>
