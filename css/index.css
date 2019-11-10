@@ -1,0 +1,16 @@
+.header {
+	background: #484848;
+}
+
+.header a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.jumbotron {
+	background: #f9f1e7;
+}
+
+.card-img-top {
+	height: 225px;
+}
