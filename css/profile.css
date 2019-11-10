@@ -1,0 +1,108 @@
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #434343;
+}
+
+body {
+	background: #f9f1e7;
+}
+
+.header {
+	background: #484848;
+}
+
+.header a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*.container {
+	max-width: 100%;
+}*/
+
+.avatar {
+	position: relative;
+}
+
+.upload_avatar {
+	top: 7rem;
+	left: 7.5rem;
+	z-index: 1;
+	position: absolute;
+}
+
+.upload_avatar label {
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+	font-weight: normal;
+	cursor: pointer;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.upload_avatar label:hover {
+	background: #e2e2e2;
+	transition: all 0.2s ease-in-out;
+}
+
+.upload_avatar span {
+	position: absolute;
+	left: .75rem;
+	top: .55rem;
+}
+
+.preview_avatar {
+	width: 10rem;
+	height: 10rem;
+	position: relative;
+	border-radius: 100%;
+}
+
+.preview_img {
+	background-image: url('../img/avatar.jpeg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.datepicker {
+	padding-left: 0.75rem!important;
+}
+
+.update_btn, .cancel_btn {
+	width: 7rem;
+}
+
+.form-control::-moz-placeholder {
+	color: #a7abc3;
+	opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+	color: #a7abc3;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #a7abc3;
+}
+
+.error {
+	font-size: 12px;
+	color: red;
+}
+
+/*@media only screen and (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}*/
